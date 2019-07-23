@@ -1,0 +1,147 @@
+<!DOCTYPE>
+<html>
+ <head>
+ 	<script src=https://code.jquery.com/jquery-3.4.1.js></script>
+ <meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="Colored cubes setting.css">
+	<title>Colored cubes setting</title>
+</head>
+<body>
+	<div class="container" onclick="expand()">
+		<div class="toggle" id="toggle"></div>
+	</div>
+  <div class="cubes" id="cubes">
+		<div class="item1"></div>
+		<div class="item2"></div>
+		<div class="item3"></div>
+		<div class="item4"></div>
+	</div>
+	 <select id="th" onchange="ch()">
+		 <option>Light</option>
+		 <option>Dark</option>
+		 <option>Light Gray</option>
+		 <option>Gray</option>
+		 <option>Dark Gray</option>
+	 </select>
+	 <select id="th2" onchange="ch2()">
+		 <option>Green</option>
+		 <option>Red</option>
+		 <option>Blue</option>
+		 <option>Yellow</option>
+		 <option>Purple</option>
+		 <option>Orange</option>
+		 <option>Salat</option>
+		 <option>Pink</option>
+		 <option>Birch</option>
+	 </select>
+  <script type="text/javascript">
+		var j=0;
+		var i=document.getElementById("cubes").childNodes;
+		function expand(){
+			if(j==0){
+				i[5].style.transform='translate(103px)';
+				i[7].style.transform='translateX(-103px)';
+				i[1].style.transform='translateX(-103px)';
+				i[3].style.transform='translate(103px)';
+       j=1;
+			}
+			else if(j==1){
+			  i[1].style.transform='translateX(-206px)';
+				i[3].style.transform='translate(206px)';
+       j=2;
+     }
+       else if(j==2){
+			  i[1].style.transform='translateX(-103px)';
+				i[3].style.transform='translate(103px)';
+       j=3;
+     }
+			else{
+				i[5].style.transform='translate(0px)';
+				i[7].style.transform='translateX(0px)';
+				i[1].style.transform='translateX(0px)';
+				i[3].style.transform='translate(0px)';
+       j=0;
+			}
+		}
+   function ch(){
+  	let th=$("#th").val();
+    if (th=="Dark")
+    	{$("body").css("background-color",'#000000');}
+    if (th=="Light")
+    	{$("body").css("background-color",'#FFFFFF');}
+    if (th=="Light Gray")
+    	{$("body").css("background-color",'#999999');}
+    if (th=="Gray")
+    	{$("body").css("background-color",'#666666');}
+    if (th=="Dark Gray")
+    	{$("body").css("background-color",'#333333');}
+    }
+   function ch2(){
+  	let th=$("#th2").val();
+    if (th=="Red"){
+    	$(".toggle").css("background", '#ff0000');
+    	$(".item1").css("background", '#ff9696');
+    	$(".item2").css("background", '#ff9696');
+    	$(".item3").css("background", '#ff4b4b');
+    	$(".item4").css("background", '#ff4b4b');
+    }
+    if (th=="Green"){
+    	$(".toggle").css("background", '#00ff00');
+    	$(".item1").css("background", '#96ff96');
+    	$(".item2").css("background", '#96ff96');
+    	$(".item3").css("background", '#4bff4b');
+    	$(".item4").css("background", '#4bff4b');
+    }
+    if (th=="Blue"){
+    	$(".toggle").css("background", '#0000ff');
+    	$(".item1").css("background", '#9696ff');
+    	$(".item2").css("background", '#9696ff');
+    	$(".item3").css("background", '#4b4bff');
+    	$(".item4").css("background", '#4b4bff');
+    }
+    if (th=="Yellow"){
+    	$(".toggle").css("background", '#ffff00');
+    	$(".item1").css("background", '#ffff96');
+    	$(".item2").css("background", '#ffff96');
+    	$(".item3").css("background", '#ffff4b');
+    	$(".item4").css("background", '#ffff4b');
+    }
+    if (th=="Purple"){
+    	$(".toggle").css("background", '#9600ff');
+    	$(".item1").css("background", '#ff96ff');
+    	$(".item2").css("background", '#ff96ff');
+    	$(".item3").css("background", '#d74bff');
+    	$(".item4").css("background", '#d74bff');
+    }
+    if (th=="Orange"){
+    	$(".toggle").css("background", '#ff9600');
+    	$(".item1").css("background", '#ffff96');
+    	$(".item2").css("background", '#ffff96');
+    	$(".item3").css("background", '#ffd74b');
+    	$(".item4").css("background", '#ffd74b');
+    }
+    if (th=="Salat"){
+    	$(".toggle").css("background", '#96ff00');
+    	$(".item1").css("background", '#ffff96');
+    	$(".item2").css("background", '#ffff96');
+    	$(".item3").css("background", '#d7ff4b');
+    	$(".item4").css("background", '#d7ff4b');
+    }
+    if (th=="Pink"){
+    	$(".toggle").css("background", '#ff00ff');
+    	$(".item1").css("background", '#ff96ff');
+    	$(".item2").css("background", '#ff96ff');
+    	$(".item3").css("background", '#ff4bff');
+    	$(".item4").css("background", '#ff4bff');
+    }
+    if (th=="Birch"){
+    	$(".toggle").css("background", '#00ffff');
+    	$(".item1").css("background", '#96ffff');
+    	$(".item2").css("background", '#96ffff');
+    	$(".item3").css("background", '#4bffff');
+    	$(".item4").css("background", '#4bffff');
+    }
+     }
+	</script>
+ </body>
+</html>
