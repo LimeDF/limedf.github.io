@@ -34,35 +34,39 @@
 		 <option>Pink</option>
 		 <option>Birch</option>
 	 </select>
-  <script type="text/javascript">
-		var j=0;
-		var i=document.getElementById("cubes").childNodes;
-		function expand(){
-			if(j==0){
-				i[5].style.transform='translate(103px)';
-				i[7].style.transform='translateX(-103px)';
-				i[1].style.transform='translateX(-103px)';
-				i[3].style.transform='translate(103px)';
-       j=1;
-			}
-			else if(j==1){
-			  i[1].style.transform='translateX(-206px)';
-				i[3].style.transform='translate(206px)';
-       j=2;
-     }
-       else if(j==2){
-			  i[1].style.transform='translateX(-103px)';
-				i[3].style.transform='translate(103px)';
-       j=3;
-     }
-			else{
-				i[5].style.transform='translate(0px)';
-				i[7].style.transform='translateX(0px)';
-				i[1].style.transform='translateX(0px)';
-				i[3].style.transform='translate(0px)';
-       j=0;
-			}
-		}
+       <script type="text/javascript">
+	var j=0;
+        var i=document.getElementById("cubes").childNodes;
+	function expand(){
+	 if(j==0)
+	  {
+	   i[7].style.transform='translate(103px)';
+	   i[5].style.transform='translateX(-103px)';
+	   i[1].style.transform='translateX(-103px)';
+	   i[3].style.transform='translate(103px)';
+           j=1;
+	  }
+	 else if(j==1)
+	  {
+	   i[1].style.transform='translateX(-206px)';
+	   i[3].style.transform='translate(206px)';
+           j=2;
+          }
+         else if(j==2)
+	  {
+           i[1].style.transform='translateX(-103px)';
+           i[3].style.transform='translate(103px)';
+           j=3;
+          }
+ 	 else
+	  {
+	   i[5].style.transform='translate(0px)';
+           i[7].style.transform='translateX(0px)';
+           i[1].style.transform='translateX(0px)';
+	   i[3].style.transform='translate(0px)';
+           j=0;
+	  }
+	 }
    function ch(){
   	let th=$("#th").val();
     if (th=="Dark")
