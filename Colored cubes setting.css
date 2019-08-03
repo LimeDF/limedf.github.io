@@ -6,7 +6,7 @@ body{
 }
 .container,.cubes{
 	height: 100px;
-	width: 132px;
+	width: 100px;
 	position: absolute;
 	margin: auto;
 	top: 0;
